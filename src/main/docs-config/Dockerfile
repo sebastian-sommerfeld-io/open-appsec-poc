@@ -9,6 +9,8 @@ RUN yarn global add @asciidoctor/core@~2.2 \
 
 COPY antora-playbook.yml /antora/antora-playbook.yml
 
+RUN mkdir -p /antora/target
+
 WORKDIR /antora
 
 RUN antora generate antora-playbook.yml --stacktrace --clean --fetch
@@ -22,4 +24,4 @@ FROM httpd:2.4-alpine AS run
 LABEL maintainer="sebastian@sommerfeld.io"
 
 RUN rm /usr/local/apache2/htdocs/index.html
-COPY --from=build /tmp/antora/open-appsec-poc/public /usr/local/apache2/htdocs
+COPY --from=build /antora/target/open-appsec-poc/public /usr/local/apache2/htdocs

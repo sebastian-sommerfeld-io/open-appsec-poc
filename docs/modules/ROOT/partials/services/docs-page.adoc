@@ -1,6 +1,6 @@
 The `docs-page` service exposes the documentation from this projects repository as a website. This website is generated from AsciiDoc files using the documentation tool link:https://antora.org[Antora].
 
-[cols="1,1,1", options="header"]
+[cols="1,1,3", options="header"]
 |===
 |Container Image |Container Name |URL
 |`local/docs-page:dev` |`docs_page` |http://localhost:7888 _(To test open-appsec, access the docs-page through the reverse-proxy on port 80)._

@@ -12,9 +12,17 @@
 # include::ROOT:image$bash-docs/whitebox.puml[]
 # ....
 #
+# ==== Reverse Proxy + open-appsec agent
+#
 # include::ROOT:partial$services/reverse-proxy.adoc[]
 #
+# ==== Docs Page
+#
 # include::ROOT:partial$services/docs-page.adoc[]
+#
+# ==== Webgoat
+#
+# include::ROOT:partial$services/webgoat.adoc[]
 #
 # === Script Arguments
 #
