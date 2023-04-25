@@ -1,0 +1,27 @@
+---
+site:
+  title: open-appsec PoC 
+  url: http://localhost
+  start_page: open-appsec-poc::index.adoc
+  robots: allow
+content:
+  branches: ['*', '!dependabot/*']
+  # tags: [v*]
+  sources:
+    - url: https://github.com/sebastian-sommerfeld-io/open-appsec-poc.git
+      start_path: docs
+asciidoc:
+  attributes:
+    kroki-fetch-diagram: true
+  extensions:
+    - asciidoctor-kroki
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+output:
+  clean: true
+  dir: /tmp/antora/open-appsec-poc/public
+runtime:
+  cache_dir: /tmp/antora/open-appsec-poc/cache/antora
+  fetch: true

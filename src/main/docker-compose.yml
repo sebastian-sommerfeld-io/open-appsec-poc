@@ -1,0 +1,22 @@
+---
+version: "3.3"
+services:
+
+  docs-page:
+    image: local/docs-page:dev
+    container_name: docs-page
+    build: docs-config
+    ports:
+      - 7888:80
+    restart: unless-stopped
+
+  reverse_proxy:
+    image: nginx:1.24.0-bullseye
+    container_name: reverse_proxy
+    depends_on:
+      - docs-page
+    network_mode: host
+    volumes:
+      - ./reverse-proxy-config/nginx/http.conf:/etc/nginx/conf.d:ro
+    privileged: true
+    restart: unless-stopped
