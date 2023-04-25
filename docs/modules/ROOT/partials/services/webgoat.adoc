@@ -5,5 +5,5 @@ Now, while we in no way condone causing intentional harm to any animal, goat or 
 [cols="1,1,1", options="header"]
 |===
 |Container Image |Container Name |URL
-|`webgoat/webgoat` |`webgoat` |http://localhost/webgoat
+|`webgoat/webgoat` |`webgoat` |http://localhost/WebGoat, http://localhost:7080/WebGoat, http://localhost:7090/WebGoat
 |===
