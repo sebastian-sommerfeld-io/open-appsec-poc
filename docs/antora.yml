@@ -1,6 +1,6 @@
 ---
 name: open-appsec-poc
-title: open-appsec
+title: open-appsec PoC
 version: main
 start_page: ROOT:index.adoc
 nav:
