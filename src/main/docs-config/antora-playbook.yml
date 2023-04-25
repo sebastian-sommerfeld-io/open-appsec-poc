@@ -22,7 +22,7 @@ ui:
     snapshot: true
 output:
   clean: true
-  dir: /antora/target/open-appsec-poc/public
+  dir: /tmp/antora/open-appsec-poc/public
 runtime:
-  cache_dir: /antora/target/open-appsec-poc/cache/antora
+  cache_dir: /tmp/antora/open-appsec-poc/cache/antora
   fetch: true

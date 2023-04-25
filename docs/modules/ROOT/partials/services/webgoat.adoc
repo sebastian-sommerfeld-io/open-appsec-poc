@@ -2,7 +2,7 @@ link:https://hub.docker.com/r/webgoat/webgoat[WebGoat] is a deliberately insecur
 
 Now, while we in no way condone causing intentional harm to any animal, goat or otherwise, we think learning everything you can about security vulnerabilities is essential to understanding just what happens when even a small bit of unintended code gets into your applications.
 
-[cols="1,1,1", options="header"]
+[cols="1,1,3", options="header"]
 |===
 |Container Image |Container Name |URL
 |`webgoat/webgoat` |`webgoat` |http://localhost/WebGoat, http://localhost:7080/WebGoat, http://localhost:7090/WebGoat
