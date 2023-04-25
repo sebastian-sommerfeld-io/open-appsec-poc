@@ -1,0 +1,39 @@
+---
+ls:
+  .adoc: kebab-case | SCREAMING_SNAKE_CASE
+  .puml: kebab-case
+  .md: kebab-case | SCREAMING_SNAKE_CASE
+
+  .conf: kebab-case
+  .go: snake_case
+  .json: kebab-case
+  .rb: kebab-case
+  .tf: kebab-case
+  .yml: kebab-case
+  .yaml: kebab-case
+
+  .sh: kebab-case
+
+  .css: kebab-case
+  .html: kebab-case
+  .js: kebab-case
+
+  Dockerfile: PascalCase
+  Vagrantfile: PascalCase
+  Jenkinsfile: PascalCase
+
+  .env: lowercase
+  .folderslintrc: lowercase
+  .gitignore: lowercase
+  .gitkeep: lowercase
+
+ignore:
+  - .adoc-links.json
+  - .gitpod.yml
+  - .ls-lint.yml
+  - .yamllint.yml
+  - .git
+  - .idea
+  - node_modules
+  - src/main/github/.terraform-docs.yml
+  - target
