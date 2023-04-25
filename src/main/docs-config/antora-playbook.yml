@@ -1,6 +1,6 @@
 ---
 site:
-  title: open-appsec PoC 
+  title: open-appsec PoC
   url: http://localhost
   start_page: open-appsec-poc::index.adoc
   robots: allow
