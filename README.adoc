@@ -21,18 +21,27 @@ PoC project to get a feeling for https://www.openappsec.io. The project comes wi
 image:{github-actions-url}/{job-generate-docs}/{badge}[Github Badge, link={github-actions-url}/{job-generate-docs}]
 image:{github-actions-url}/{job-ci}/{badge}[Github Badge, link={github-actions-url}/{job-ci}]
 
-* Github Repository -> {url-project}
-* Documentation -> https://www.sommerfeld.io/docs/docker-images/{project-name}-docs/main
-* Where to file issues -> {url-project}/issues
+* Github Repository: {url-project}
+* link:{url-project}/issues[Issues are filed and organized in Github]
+* All issues marked as link:{url-project}/issues?q=is%3Aopen+label%3Arisk%2Csecurity+[risk / technical debt or related to security issues]
 
 == About this project
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+The open-appsec-PoC project is a proof-of-concept / demo project to get in touch with link:https://docs.openappsec.io/what-is-open-appsec[open-appsec]. To use this project, you will need to have Docker and Docker Compose installed on your system. This PoC project was project is developed on Ubuntu.
+
+=== open-appsec
+open-appsec is an open-source fully automated Web Application & API Security solution. It is powered by a machine learning engine which continuously analyzes users' HTTP/S requests as they visit the website or API.
+
+The analysis includes the application structure and how users interact with the content in order to identify patterns and automatically stop and block malicious requests and bad actors.
+open-appsec provides pre-emptive threat protection against OWASP Top-10- and zero-day attacks. Thanks to machine learning, there is no threat signature upkeep and exception handling, like common in many WAF solutions.
+
+It can be deployed as add-on to Kubernetes Ingress Controller, NGINX and Kong API Gateway (Envoy support soon as well) on many platforms. The project is link:https://github.com/openappsec[available on Github].
+
+NOTE: Currently local declarative management for open-appsec on Docker is not available yet. This will be added soon. Until then connect your installation to the link:https://my.openappsec.io[WebUI (SaaS Management)] directly.
+
+The open-appsec agent container is based on Alpine Linux.
 
 == How to use this project
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-== Risks and Technical Debts
-See https://github.com/sebastian-sommerfeld-io/open-appsec-poc/issues?q=is%3Aopen+label%3Arisk%2Csecurity+
+Simply use `xref:AUTO-GENERATED:bash-docs/src/main/start-sh.adoc[src/main/start.sh]` and `xref:AUTO-GENERATED:bash-docs/src/main/stop-sh.adoc[src/main/stop.sh]` to start and stop the Docker Compose stack which controls all services from this Poc project.
 
 == Contact
 Feel free to contact me via sebastian@sommerfeld.io.
