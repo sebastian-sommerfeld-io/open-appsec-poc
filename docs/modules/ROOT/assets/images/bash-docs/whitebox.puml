@@ -15,10 +15,8 @@ FontName Ubuntu
 rectangle containers {
   component reverse_proxy <<:80>>
   component docs_page <<:7888>>
-  component insecure_webapp <<:8080>>
   component open_appsec_agent
   
-  insecure_webapp -up-> reverse_proxy
   docs_page -up-> reverse_proxy
 }
 

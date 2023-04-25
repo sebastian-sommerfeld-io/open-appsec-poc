@@ -5,7 +5,7 @@ updates:
     directory: /
     schedule:
       interval: weekly
-  - package-ecosystem: "docker"
-    directory: "src/main"
+  - package-ecosystem: docker
+    directory: src/main/docs-config
     schedule:
-      interval: "weekly"
+      interval: weekly
