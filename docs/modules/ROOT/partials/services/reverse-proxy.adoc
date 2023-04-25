@@ -1,0 +1,9 @@
+open-appsec can be deployed on Docker or similar containerized platforms integrating with an NGINX or container to provide protection to any applications and APIs served by NGINX Reverse Proxy or Webserver. 
+
+Enhanced container images are provided for NGINX which contain the open-appsec attachment. This attachment then sends traffic for inspection to an open-appsec agent container.
+
+[cols="1,1,1", options="header"]
+|===
+|Container Image |Container Name |URL
+|`ghcr.io/openappsec/nginx-attachment` |`reverse_proxy` |http://localhost
+|===

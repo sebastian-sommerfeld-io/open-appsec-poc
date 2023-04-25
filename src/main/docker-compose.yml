@@ -2,9 +2,9 @@
 version: "3.3"
 services:
 
-  docs-page:
+  docs_page:
     image: local/docs-page:dev
-    container_name: docs-page
+    container_name: docs_page
     build: docs-config
     ports:
       - 7888:80

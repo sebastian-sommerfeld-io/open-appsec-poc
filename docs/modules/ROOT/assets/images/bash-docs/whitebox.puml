@@ -1,0 +1,34 @@
+@startuml monitoring
+
+skinparam linetype ortho
+skinparam monochrome false
+skinparam componentStyle uml2
+skinparam backgroundColor #fff
+skinparam ArrowColor black
+skinparam NoteBorderColor Grey
+skinparam NoteBackgroundColor #fdfdfd
+skinparam defaultTextAlignment center
+skinparam activity {
+FontName Ubuntu
+}
+
+rectangle containers {
+  component reverse_proxy <<:80>>
+  component docs_page <<:7888>>
+  component insecure_webapp <<:8080>>
+  component open_appsec_agent
+  
+  insecure_webapp -up-> reverse_proxy
+  docs_page -up-> reverse_proxy
+}
+
+rectangle my_openappsec_io as "my.openappsec.io" {
+  control management_ui
+}
+
+actor website_user
+reverse_proxy -up-> website_user
+
+open_appsec_agent -right-> my_openappsec_io
+
+@enduml
