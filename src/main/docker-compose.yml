@@ -11,12 +11,27 @@ services:
     restart: unless-stopped
 
   reverse_proxy:
-    image: nginx:1.24.0-bullseye
+    image: ghcr.io/openappsec/nginx-attachment:1.2303.1-rc1-v1.22.1
     container_name: reverse_proxy
     depends_on:
       - docs-page
     network_mode: host
+    ipc: host
     volumes:
-      - ./reverse-proxy-config/nginx/http.conf:/etc/nginx/conf.d:ro
+      - ./reverse-proxy-config/nginx:/etc/nginx/conf.d:ro
     privileged: true
     restart: unless-stopped
+
+  open_appsec_agent:
+    image: ghcr.io/openappsec/agent:1.2313-rc2
+    container_name: open_appsec_agent
+    restart: unless-stopped
+    ipc: host
+    volumes:
+      - open_appsec_agent_conf:/etc/cp/conf
+      - open_appsec_agent_data:/etc/cp/data
+    entrypoint: /cp-nano-agent --token ${TOKEN}
+
+volumes:
+  open_appsec_agent_conf:
+  open_appsec_agent_data:

@@ -22,5 +22,5 @@ set -o nounset
 # set -o xtrace
 
 
-echo -e "$LOG_INFO Run $0"
+echo -e "$LOG_INFO Shutdown services and clean up"
 docker-compose down -v --rmi all

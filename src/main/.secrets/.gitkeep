@@ -1,0 +1,5 @@
+Currently, tokens are stored in local files because no better solution has been implemented yet. However, it is important to note that these token files are not committed to the Git repository to avoid too many security issues. Storing sensitive information like tokens in local files is not an ideal solution because it can potentially expose secret information. In the future, this might be swapped for a more secure solution for storing tokens.
+
+Expected files:
+
+* openappsec-fritz-box.token

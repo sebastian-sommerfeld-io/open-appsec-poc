@@ -28,5 +28,21 @@ set -o nounset
 # set -o xtrace
 
 
-echo -e "$LOG_INFO Run $0"
+readonly TOKEN_FILE=".secrets/openappsec-fritz-box.token"
+
+
+if [ ! -f "$TOKEN_FILE" ]
+then
+    echo -e "$LOG_ERROR Cannot start docker-compose stack"
+    echo -e "$LOG_ERROR Missing $TOKEN_FILE"
+    exit 8
+fi
+
+
+echo -e "$LOG_INFO Read token"
+TOKEN="$(cat $TOKEN_FILE)"
+readonly TOKEN
+export TOKEN
+
+echo -e "$LOG_INFO Startup services"
 docker-compose up -d
