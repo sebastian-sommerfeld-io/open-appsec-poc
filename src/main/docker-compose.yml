@@ -4,7 +4,7 @@ services:
 
   docs_page:
     image: local/docs-page:dev
-    container_name: docs_page
+    container_name: .
     build: docs-config
     ports:
       - 7888:80
