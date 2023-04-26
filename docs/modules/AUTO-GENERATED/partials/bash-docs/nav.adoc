@@ -1,2 +1,2 @@
-* `xref:AUTO-GENERATED:bash-docs/src/main/stop-sh.adoc[src/main/stop.sh]`
 * `xref:AUTO-GENERATED:bash-docs/src/main/start-sh.adoc[src/main/start.sh]`
+* `xref:AUTO-GENERATED:bash-docs/src/main/stop-sh.adoc[src/main/stop.sh]`
