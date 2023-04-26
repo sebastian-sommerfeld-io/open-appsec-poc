@@ -23,4 +23,4 @@ set -o nounset
 
 
 echo -e "$LOG_INFO Shutdown services and clean up"
-docker-compose down -v --rmi all
+docker compose down -v --rmi all

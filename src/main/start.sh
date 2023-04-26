@@ -47,7 +47,7 @@ readonly TOKEN_FILE=".secrets/openappsec-fritz-box.token"
 
 if [ ! -f "$TOKEN_FILE" ]
 then
-    echo -e "$LOG_ERROR Cannot start docker-compose stack"
+    echo -e "$LOG_ERROR Cannot start docker compose stack"
     echo -e "$LOG_ERROR Missing $TOKEN_FILE"
     exit 8
 fi
@@ -59,4 +59,4 @@ readonly TOKEN
 export TOKEN
 
 echo -e "$LOG_INFO Startup services"
-docker-compose up -d
+docker compose up -d
