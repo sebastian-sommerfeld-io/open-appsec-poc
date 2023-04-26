@@ -9,8 +9,6 @@ RUN yarn global add @asciidoctor/core@~2.2 \
 
 COPY antora-playbook.yml /antora/antora-playbook.yml
 
-RUN mkdir -p /antora
-
 WORKDIR /antora
 
 RUN antora generate antora-playbook.yml --stacktrace --clean --fetch
