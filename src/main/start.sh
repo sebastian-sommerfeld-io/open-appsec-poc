@@ -59,4 +59,4 @@ readonly TOKEN
 export TOKEN
 
 echo -e "$LOG_INFO Startup services"
-docker compose up -d
+docker compose up -d --build
