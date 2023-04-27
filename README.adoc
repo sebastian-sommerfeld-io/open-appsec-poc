@@ -41,7 +41,7 @@ NOTE: Currently local declarative management for open-appsec on Docker is not av
 The open-appsec agent container is based on Alpine Linux.
 
 == How to use this project
-Simply use `xref:AUTO-GENERATED:bash-docs/src/main/start-sh.adoc[src/main/start.sh]` and `xref:AUTO-GENERATED:bash-docs/src/main/stop-sh.adoc[src/main/stop.sh]` to start and stop the Docker Compose stack which controls all services from this Poc project.
+Simply use `xref:AUTO-GENERATED:bash-docs/src/main/start-sh.adoc[src/main/start.sh]` and `xref:AUTO-GENERATED:bash-docs/src/main/stop-sh.adoc[src/main/stop.sh]` to control the Docker Compose stack which manages all services from this Poc project.
 
 === Components
 [plantuml, rendered-plantuml-image, svg]
