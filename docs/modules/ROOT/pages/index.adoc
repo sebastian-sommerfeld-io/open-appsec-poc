@@ -1,4 +1,17 @@
 = Startpage
 include::ROOT:partial$vars.adoc[]
 
-http://localhost/juice-shop
+== Components
+[plantuml, rendered-plantuml-image, svg]
+....
+include::ROOT:image$bash-docs/whitebox.puml[]
+....
+
+=== Reverse Proxy + open-appsec agent
+include::ROOT:partial$services/reverse-proxy.adoc[]
+
+=== Docs Page
+include::ROOT:partial$services/docs-page.adoc[]
+
+=== OWASP Juice Shop
+include::ROOT:partial$services/owasp-juice-shop.adoc[]
