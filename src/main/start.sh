@@ -20,9 +20,9 @@
 #
 # include::ROOT:partial$services/docs-page.adoc[]
 #
-# ==== Webgoat
+# ==== OWASP Juice Shop
 #
-# include::ROOT:partial$services/webgoat.adoc[]
+# include::ROOT:partial$services/owasp-juice-shop.adoc[]
 #
 # === Script Arguments
 #

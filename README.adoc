@@ -55,8 +55,8 @@ include::ROOT:partial$services/reverse-proxy.adoc[]
 ==== Docs Page
 include::ROOT:partial$services/docs-page.adoc[]
 
-==== Webgoat
-include::ROOT:partial$services/webgoat.adoc[]
+==== OWASP Juice Shop
+include::ROOT:partial$services/owasp-juice-shop.adoc[]
 
 == Contact
 Feel free to contact me via sebastian@sommerfeld.io.

@@ -4,18 +4,17 @@ services:
 
   docs_page:
     image: local/docs-page:dev
-    container_name: .
-    build: docs-config
+    container_name: docs_page
+    build: ./docs-config
     ports:
       - 7888:80
     restart: unless-stopped
 
-  webgoat:
-    image: webgoat/webgoat:v2023.4
-    container_name: webgoat
+  juice_shop:
+    image: bkimminich/juice-shop:v14.5.1
+    container_name: juice_shop
     ports:
-      - 7080:8080
-      - 7090:9090
+      - 7080:3000
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
@@ -26,7 +25,7 @@ services:
     container_name: reverse_proxy
     depends_on:
       - docs_page
-      - webgoat
+      - juice_shop
     network_mode: host
     ipc: host
     volumes:
