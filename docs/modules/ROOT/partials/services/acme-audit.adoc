@@ -1,7 +1,13 @@
+:direct_url: http://localhost:7080
+:proxy_url: http://localhost/
+
 Acme Audit that has multiple security vulnerabilities.
+
+. Visit {direct_url} and enter `' or 1=1--` as username with a password of your choise. This should give you access to the web page (which normally should be prevented)
+. Visit {proxy_url} and enter `' or 1=1--` as username with a password of your choise. This attempt should be blocked and should be logged in the link:https://my.openappsec.io[open-appsecc web management ui]
 
 [cols="1,1,3,4", options="header"]
 |===
 |Container Image |Container Name |URL |Info
-|`public.ecr.aws/f4q1i2m2/acmeaudit:latest` |acmeaudit |http://localhost/juiceshop, http://localhost:7081 |Hacked from link:https://www.openappsec.io/playground[Kubernetes Ingress Playground] via `kubectl` (`link:https://hub.docker.com/r/bilbonl/acmeaudit[bilbonl/acmeaudit:latest]` seems to be the same
+|`public.ecr.aws/f4q1i2m2/acmeaudit:latest` |acmeaudit |{proxy_url}, {direct_url} |Hacked from link:https://www.openappsec.io/playground[Kubernetes Ingress Playground] via `kubectl` (`link:https://hub.docker.com/r/bilbonl/acmeaudit[bilbonl/acmeaudit:latest]` seems to be the same
 |===
