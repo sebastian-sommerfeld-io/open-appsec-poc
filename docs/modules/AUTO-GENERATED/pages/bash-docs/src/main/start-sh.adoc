@@ -32,6 +32,10 @@ include::ROOT:partial$services/reverse-proxy.adoc[]
 
 include::ROOT:partial$services/docs-page.adoc[]
 
+==== Acme Audit
+
+include::ROOT:partial$services/owasp-juiceshop.adoc[]
+
 ==== OWASP Juice Shop
 
 include::ROOT:partial$services/owasp-juiceshop.adoc[]
