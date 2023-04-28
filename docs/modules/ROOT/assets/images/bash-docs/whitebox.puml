@@ -1,4 +1,4 @@
-@startuml monitoring
+@startuml openappsec
 
 skinparam linetype ortho
 skinparam monochrome false
@@ -15,12 +15,15 @@ FontName Ubuntu
 rectangle containers {
   component reverse_proxy <<:80>>
   component docspage <<:7888>>
-  component juice_shop <<:7080>>
+  component juiceshop <<:7080>>
+  component acmeaudit <<:7081>>
 
   component open_appsec_agent
-  
+
+  reverse_proxy -[hidden]right- open_appsec_agent
   docspage -up-> reverse_proxy
-  juice_shop -up-> reverse_proxy
+  juiceshop -up-> reverse_proxy
+  acmeaudit -up-> reverse_proxy
 }
 
 rectangle my_openappsec_io as "my.openappsec.io" {
@@ -28,7 +31,7 @@ rectangle my_openappsec_io as "my.openappsec.io" {
 }
 
 actor website_user
-reverse_proxy -up-> website_user
+reverse_proxy -left-> website_user
 
 open_appsec_agent -right-> my_openappsec_io
 
