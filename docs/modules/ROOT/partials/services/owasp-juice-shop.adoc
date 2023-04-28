@@ -1,14 +1,14 @@
-link:https://owasp.org/www-project-juice-shop[OWASP Juice Shop] is probably the most modern and sophisticated insecure web application! It can be used in security trainings, awareness demos, CTFs and as a guinea pig for security tools! Juice Shop encompasses vulnerabilities from the entire OWASP Top Ten along with many other security flaws found in real-world applications!
+link:https://owasp.org/www-project-juiceshop[OWASP Juice Shop] is probably the most modern and sophisticated insecure web application! It can be used in security trainings, awareness demos, CTFs and as a guinea pig for security tools! Juice Shop encompasses vulnerabilities from the entire OWASP Top Ten along with many other security flaws found in real-world applications!
 
 For a detailed introduction, full list of features and architecture overview please visit the official project page: https://owasp-juice.shop
 
-* On link:https://github.com/juice-shop/juice-shop[Github]
-* On link:https://hub.docker.com/r/bkimminich/juice-shop[DockerHub]
-* link:https://juice-shop.github.io/juice-shop[Introduction Slides]
+* On link:https://github.com/juiceshop/juiceshop[Github]
+* On link:https://hub.docker.com/r/bkimminich/juiceshop[DockerHub]
+* link:https://juiceshop.github.io/juiceshop[Introduction Slides]
 * link:https://pwning.owasp-juice.shop[Companion Guide]
 
 [cols="1,1,3", options="header"]
 |===
 |Container Image |Container Name |URL
-|`bkimminich/juice-shop` |`juice_shop` |http://localhost/juice-shop, http://localhost:7080
+|`bkimminich/juiceshop` |`juice_shop` |http://localhost/juiceshop, http://localhost:7080
 |===

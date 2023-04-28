@@ -2,19 +2,29 @@
 version: "3.3"
 services:
 
-  docs_page:
+  docspage:
     image: local/docs-page:dev
-    container_name: docs_page
+    container_name: docspage
     build: ./docs-config
     ports:
       - 7888:80
     restart: unless-stopped
 
-  juice_shop:
+  juiceshop:
     image: bkimminich/juice-shop:v14.5.1
-    container_name: juice_shop
+    container_name: juiceshop
     ports:
       - 7080:3000
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+
+  acmeaudit:
+    image: public.ecr.aws/f4q1i2m2/acmeaudit:latest
+    container_name: acmeaudit
+    ports:
+      - 7081:3000
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
@@ -24,8 +34,9 @@ services:
     image: ghcr.io/openappsec/nginx-attachment:1.2303.1-rc1-v1.22.1
     container_name: reverse_proxy
     depends_on:
-      - docs_page
-      - juice_shop
+      - docspage
+      - juiceshop
+      - acmeaudit
     network_mode: host
     ipc: host
     volumes:

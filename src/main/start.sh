@@ -20,9 +20,13 @@
 #
 # include::ROOT:partial$services/docs-page.adoc[]
 #
+# ==== Acme Audit
+#
+# include::ROOT:partial$services/owasp-juiceshop.adoc[]
+#
 # ==== OWASP Juice Shop
 #
-# include::ROOT:partial$services/owasp-juice-shop.adoc[]
+# include::ROOT:partial$services/owasp-juiceshop.adoc[]
 #
 # === Script Arguments
 #

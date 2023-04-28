@@ -1,0 +1,7 @@
+Acme Audit that has multiple security vulnerabilities.
+
+[cols="1,1,3,4", options="header"]
+|===
+|Container Image |Container Name |URL |Info
+|`public.ecr.aws/f4q1i2m2/acmeaudit:latest` |acmeaudit |http://localhost/juiceshop, http://localhost:7081 |Hacked from link:https://www.openappsec.io/playground[Kubernetes Ingress Playground] via `kubectl` (`link:https://hub.docker.com/r/bilbonl/acmeaudit[bilbonl/acmeaudit:latest]` seems to be the same
+|===

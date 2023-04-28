@@ -14,12 +14,12 @@ FontName Ubuntu
 
 rectangle containers {
   component reverse_proxy <<:80>>
-  component docs_page <<:7888>>
+  component docspage <<:7888>>
   component juice_shop <<:7080>>
 
   component open_appsec_agent
   
-  docs_page -up-> reverse_proxy
+  docspage -up-> reverse_proxy
   juice_shop -up-> reverse_proxy
 }
 
