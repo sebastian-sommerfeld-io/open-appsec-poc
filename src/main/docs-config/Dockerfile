@@ -1,7 +1,7 @@
 #
 # Stage 1: build
 #
-FROM antora/antora:3.1.2 AS build
+FROM antora/antora:3.1.4 AS build
 LABEL maintainer="sebastian@sommerfeld.io"
 
 RUN yarn global add @asciidoctor/core@~2.2 \
