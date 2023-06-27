@@ -2,9 +2,21 @@
 version: "3.3"
 services:
 
+  open_appsec_agent:
+    image: ghcr.io/openappsec/agent:1.2313-rc2
+    container_name: open_appsec_agent
+    ipc: host
+    volumes:
+      - open_appsec_agent_conf:/etc/cp/conf
+      - open_appsec_agent_data:/etc/cp/data
+    entrypoint: /cp-nano-agent --token ${TOKEN}
+    restart: unless-stopped
+
   docspage:
     image: local/docs-page:dev
     container_name: docspage
+    depends_on:
+      - open_appsec_agent
     build: ./docs-config
     ports:
       - 7888:80
@@ -13,6 +25,8 @@ services:
   acmeaudit:
     image: public.ecr.aws/f4q1i2m2/acmeaudit:latest
     container_name: acmeaudit
+    depends_on:
+      - open_appsec_agent
     ports:
       - 7080:3000
     volumes:
@@ -23,6 +37,8 @@ services:
   # juiceshop:
   #   image: bkimminich/juice-shop:v14.5.1
   #   container_name: juiceshop
+  #   depends_on:
+  #     - open_appsec_agent
   #   ports:
   #     - 7081:3000
   #   volumes:
@@ -42,16 +58,6 @@ services:
     volumes:
       - ./reverse-proxy-config/nginx:/etc/nginx/conf.d:ro
     privileged: true
-    restart: unless-stopped
-
-  open_appsec_agent:
-    image: ghcr.io/openappsec/agent:1.2313-rc2
-    container_name: open_appsec_agent
-    ipc: host
-    volumes:
-      - open_appsec_agent_conf:/etc/cp/conf
-      - open_appsec_agent_data:/etc/cp/data
-    entrypoint: /cp-nano-agent --token ${TOKEN}
     restart: unless-stopped
 
 volumes:

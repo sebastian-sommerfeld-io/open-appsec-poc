@@ -67,7 +67,7 @@ docker compose up -d --build
 
 echo -e "$LOG_INFO +--------------------------------------------------+"
 echo -e "$LOG_INFO |                                                  |"
-echo -e "$LOG_INFO |    To access Acme Audit Demo app                 |"
+echo -e "$LOG_INFO |    To access Acme Audit demo app                 |"
 echo -e "$LOG_INFO |    visit ${Y}http://localhost${D}                        |"
 echo -e "$LOG_INFO |                                                  |"
 echo -e "$LOG_INFO |    To see the docs page for this project         |"

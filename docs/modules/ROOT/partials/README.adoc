@@ -3,12 +3,12 @@ PoC project to get a feeling for https://www.openappsec.io. The project comes wi
 image:{github-actions-url}/{job-generate-docs}/{badge}[Github Badge, link={github-actions-url}/{job-generate-docs}]
 image:{github-actions-url}/{job-ci}/{badge}[Github Badge, link={github-actions-url}/{job-ci}]
 
+== About this project
+The open-appsec-PoC project is a proof-of-concept / demo project to get in touch with link:https://docs.openappsec.io/what-is-open-appsec[open-appsec]. To use this project, you will need to have Docker and Docker Compose installed on your system. This PoC project was project is developed on Ubuntu.
+
 * Github Repository: {url-project}
 * link:{url-project}/issues[Issues are filed and organized in Github]
 * All issues marked as link:{url-project}/issues?q=is%3Aopen+label%3Arisk%2Csecurity+[risk / technical debt or related to security issues]
-
-== About this project
-The open-appsec-PoC project is a proof-of-concept / demo project to get in touch with link:https://docs.openappsec.io/what-is-open-appsec[open-appsec]. To use this project, you will need to have Docker and Docker Compose installed on your system. This PoC project was project is developed on Ubuntu.
 
 === open-appsec
 open-appsec is an open-source fully automated Web Application & API Security solution. It is powered by a machine learning engine which continuously analyzes users' HTTP/S requests as they visit the website or API.
