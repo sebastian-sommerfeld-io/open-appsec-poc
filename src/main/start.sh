@@ -2,31 +2,10 @@
 # @file start.sh
 # @brief Startup the open-appsec-poc Docker Compose stack.
 #
-# @description Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-#
-# === Components
-#
-# [plantuml, rendered-plantuml-image, svg]
-#
-# ....
-# include::ROOT:image$bash-docs/whitebox.puml[]
-# ....
-#
-# ==== Reverse Proxy + open-appsec agent
-#
-# include::ROOT:partial$services/reverse-proxy.adoc[]
-#
-# ==== Docs Page
-#
-# include::ROOT:partial$services/docs-page.adoc[]
-#
-# ==== Acme Audit
-#
-# include::ROOT:partial$services/owasp-juiceshop.adoc[]
-#
-# ==== OWASP Juice Shop
-#
-# include::ROOT:partial$services/owasp-juiceshop.adoc[]
+# @description Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+# tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+# et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem#
+# ipsum dolor sit amet. 
 #
 # === Script Arguments
 #
@@ -38,6 +17,30 @@
 # ```
 # ./start.sh
 # ```
+#
+# == Components
+#
+# [plantuml, rendered-plantuml-image, svg]
+#
+# ....
+# include::ROOT:image$bash-docs/whitebox.puml[]
+# ....
+#
+# === Reverse Proxy + open-appsec agent
+#
+# include::ROOT:partial$services/reverse-proxy.adoc[]
+#
+# === Docs Page
+#
+# include::ROOT:partial$services/docs-page.adoc[]
+#
+# === Acme Audit
+#
+# include::ROOT:partial$services/owasp-juiceshop.adoc[]
+#
+# === OWASP Juice Shop
+#
+# include::ROOT:partial$services/owasp-juiceshop.adoc[]
 
 
 set -o errexit
