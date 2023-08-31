@@ -1,0 +1,2 @@
+* `xref:AUTO-GENERATED:docker-docs/src/main/docs-config/dockerfile-docker-docs.adoc[src/main/docs-config/Dockerfile]`
+* `xref:AUTO-GENERATED:docker-docs/src/main/docker-compose-yml-docker-docs.adoc[src/main/docker-compose-yml]`
