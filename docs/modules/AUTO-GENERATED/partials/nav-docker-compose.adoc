@@ -1,1 +1,1 @@
-* xref:src/main/docker-compose-yml.adoc[src/main/docker-compose.yml]
+* xref:AUTO-GENERATED:src/main/docker-compose-yml.adoc[src/main/docker-compose.yml]
