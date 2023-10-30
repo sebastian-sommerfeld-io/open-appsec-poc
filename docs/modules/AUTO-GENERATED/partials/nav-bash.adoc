@@ -1,2 +1,2 @@
-* xref:AUTO-GENERATED:src/main/start-sh.adoc[src/main/start.sh]
 * xref:AUTO-GENERATED:src/main/stop-sh.adoc[src/main/stop.sh]
+* xref:AUTO-GENERATED:src/main/start-sh.adoc[src/main/start.sh]
